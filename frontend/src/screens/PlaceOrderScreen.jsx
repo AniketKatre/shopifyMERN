@@ -15,7 +15,7 @@ const PlaceOrderScreen = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 
-  const [createdOrder, { isLoading, error }] = useCreateOrderMutation();
+  const [createOrder, { isLoading, error }] = useCreateOrderMutation();
 
   useEffect(() => {
     if (!cart.shippingAddress.address) {
@@ -27,11 +27,11 @@ const PlaceOrderScreen = () => {
 
   const placeOrderHandler = async () => {
     try {
-      const res = await createdOrder({
+      const res = await createOrder({
         orderItems: cart.cartItems,
         shippingAddress: cart.shippingAddress,
         paymentMethod: cart.paymentMethod,
-        itemsPrice: cart.itemPrice,
+        itemsPrice: cart.itemsPrice,
         shippingPrice: cart.shippingPrice,
         taxPrice: cart.taxPrice,
         totalPrice: cart.totalPrice,
@@ -145,6 +145,7 @@ const PlaceOrderScreen = () => {
                 >
                   Place Order
                 </Button>
+
                 {isLoading && <Loader />}
               </ListGroup.Item>
             </ListGroup>
