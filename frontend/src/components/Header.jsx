@@ -6,6 +6,7 @@ import { FaShoppingCart, FaUser } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import SearchBox from "./SearchBox.jsx";
 import logo from "../assets/logo.png";
+import mylogo from "../assets/mylogo2.png";
 import { useLogoutMutation } from "../slices/usersApiSlice";
 import { logout } from "../slices/authSlice";
 import { resetCart } from "../slices/cartSlice.js";
@@ -33,12 +34,20 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg="dark" variant="dark" expand="md" collapseOnSelect>
+      <Navbar
+        style={{ background: "#555151" }}
+        variant="dark"
+        expand="md"
+        collapseOnSelect
+      >
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
+              <img src={mylogo} alt="mylogo" />
               <img src={logo} alt="shopify" />
-              Shopify
+              <i>
+                <small style={{ fontSize: "13px" }}>Ann</small>
+              </i>
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -76,7 +85,7 @@ const Header = () => {
               )}
 
               {userInfo && userInfo.isAdmin && (
-                <NavDropdown title="Admin" id="adminmenu">
+                <NavDropdown title="Administrator" id="adminmenu">
                   <LinkContainer to="/admin/productlist">
                     <NavDropdown.Item>Products</NavDropdown.Item>
                   </LinkContainer>
