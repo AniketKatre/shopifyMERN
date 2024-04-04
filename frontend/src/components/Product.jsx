@@ -11,7 +11,7 @@ const Product = ({ product }) => {
           <Card.Img
             src={product.image}
             variant="top"
-            style={{ width: "100%", height: "300px", overflow: "hidden" }}
+            style={{ width: "100%", height: "280px", overflow: "hidden" }}
           />
         </Link>
         <Card.Body>
@@ -29,6 +29,19 @@ const Product = ({ product }) => {
           </Card.Text>
 
           <Card.Text as="h3">${product.price}</Card.Text>
+
+          <Card.Text
+            as="h6"
+            style={{ textAlign: "center", color: "red", fontSize: "13px" }}
+          >
+            <strong>
+              {product.countInStock < 1
+                ? "Out of Stock"
+                : product.countInStock > 3
+                ? ""
+                : `Only ${product.countInStock} left in stock order soon...`}
+            </strong>
+          </Card.Text>
         </Card.Body>
       </Card>
     </>

@@ -100,6 +100,19 @@ const ProductScreen = () => {
                   />
                 </ListGroup.Item>
                 <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+
+                {product.countInStock <= 3 && (
+                  <ListGroup.Item style={{ color: "red", fontSize: "17px" }}>
+                    <strong>
+                      {product.countInStock < 1
+                        ? "Out of Stock order soon..."
+                        : product.countInStock > 3
+                        ? ""
+                        : `Only ${product.countInStock} left in stock order soon...`}
+                    </strong>
+                  </ListGroup.Item>
+                )}
+
                 <ListGroup.Item>
                   Description: {product.description}
                 </ListGroup.Item>

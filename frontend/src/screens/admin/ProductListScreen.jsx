@@ -1,6 +1,6 @@
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import { Table, Button, Row, Col } from "react-bootstrap";
+import { Table, Button, Row, Col, Image } from "react-bootstrap";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import Message from "../../components/Message";
@@ -76,6 +76,7 @@ const ProductListScreen = () => {
             <thead>
               <tr>
                 <th>ID</th>
+                <th>IMAGE</th>
                 <th>NAME</th>
                 <th>PRICE</th>
                 <th>CATEGORY</th>
@@ -87,6 +88,16 @@ const ProductListScreen = () => {
               {data.products.map((product) => (
                 <tr key={product._id}>
                   <td>{product._id}</td>
+                  <td>
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      style={{ width: "50px", height: "50px" }}
+                      className="border border-primary"
+                      fluid
+                      roundedCircle
+                    />
+                  </td>
                   <td>{product.name}</td>
                   <td>{product.price}</td>
                   <td>{product.category}</td>
