@@ -1,5 +1,9 @@
 live: https://shopify-annie.onrender.com/
 
+create by me: Aniket Katre (annie)
+                  ![ai](https://github.com/AniketKatre/shopifyMERN/assets/137198614/061321c0-f021-4147-8e47-590c701f61c1)
+
+
 HOME:
 ![image](https://github.com/AniketKatre/shopifyMERN/assets/137198614/b5799548-eb9f-4bbb-9997-cbce9dd8889c)
 
