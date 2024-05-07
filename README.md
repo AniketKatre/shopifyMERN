@@ -1,11 +1,10 @@
 live: https://shopify-annie.onrender.com/
-POSTMAN: https://red-station-188658.postman.co/workspace/Shopify-App~010919fc-b604-48a9-bd84-6b658971f61b/api/3c57dad1-21dd-4765-97ac-b35d2e82e3b1?action=share&creator=21709346&active-environment=21709346-7e12b7ba-e95c-4180-956e-6f1d746b4a85
 
+POSTMAN: https://www.postman.com/red-station-188658/workspace/shopify-app/collection/21709346-10a34f01-e926-4657-973d-5fe6b195260a
 
-create by me: Aniket Katre (annie)
+create by me: Aniket Katre (annie_jb)
 
-![ai](https://github.com/AniketKatre/shopifyMERN/assets/137198614/aed45dea-0c7c-484a-82f6-1938b33cda19)
-
+![ai2](https://github.com/AniketKatre/shopifyMERN/assets/137198614/b51b6710-8911-458f-84e7-906655b60208)
 
 
 HOME:
